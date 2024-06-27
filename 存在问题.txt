@@ -1,0 +1,6 @@
+1.安装node.js
+2.安装openai node.js库
+npm install --save openai
+3.设置密钥 
+setx OPENAI_API_KEY "your-api-key-here"
+4.验证 echo %OPENAI_API_KEY%

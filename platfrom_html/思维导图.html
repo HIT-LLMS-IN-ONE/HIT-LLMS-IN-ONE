@@ -1,0 +1,760 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Dastyle - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/jsmind@0.8.1/style/jsmind.css">
+        <script src="https://kit.fontawesome.com/11781e961a.js" crossorigin="anonymous"></script>
+        <style>
+            .logo-sm{
+                height: 40px !important;
+                border-radius: 50%
+            }
+            .name{
+                color: #efe5e5;
+                font-size: large;
+                margin-top: 50px !important;
+                margin-left: 6px;
+            }
+            .col-lg-9 {
+                -webkit-box-flex: 0;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .form-row{
+                    display: flex;
+                    align-items: center; 
+                    justify-content: space-between;
+            }
+            .form-control {
+                    width: 180px;
+                    flex-grow: 0.8; /* 输入框占据大部分空间 */
+                    margin-right: 1px; /* 与图标之间的间距 */
+            }
+
+            #myfeat {
+                color: #646262; /* 灰白色 */
+
+            }
+            .lef{
+                margin-left: 78px;
+            }
+            #jsmind_container {
+                width: 1000px;
+                height: 800px;
+            }
+            /* 基本按钮样式 */
+            .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            color: #3498db;
+            background-color: white;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            }
+
+            /* 鼠标悬停时的样式 */
+            .button:hover {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+            }
+
+            /* 隐藏原生文件上传按钮 */
+            .file_input {
+            display: none;
+            }
+
+            /* 自定义的文件上传按钮样式 */
+            .file_upload_button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            color: #3498db;
+            background-color: white;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            }
+
+            /* 文件上传按钮悬停时的样式 */
+            .file_upload_button:hover {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+            }
+        .nav{
+            display:block;
+            color : #bababa;
+        }
+        .mc{
+            font-size:15px;
+            margin-top:12px;
+        }
+        .ti-control-record:before{
+            color:white;
+        }
+        </style>
+    </head>
+
+    <body class="dark-sidenav">
+        <!-- Left Sidenav -->
+        <div class="left-sidenav">
+            <!-- LOGO -->
+            <div class="brand">
+                <a href="crm-index.html" class="logo">
+                    <span>
+                        <img src="./assets/images/2.jpg" alt="logo-small" class="logo-sm">
+                    </span>
+                    <span class="name">
+                        Hackpocalypse
+                    </span>
+                </a>
+            </div>
+            <!--end logo-->
+            <div class="menu-content h-100" data-simplebar>
+                <ul class="metismenu left-sidenav-menu">
+                    <li class="menu-label mt-0">Main</li>
+                    <li>
+                        <a href="javascript: void(0);"> <i class="fa-solid fa-graduation-cap fa-2xl" style="color: #6776e4;" class="align-self-center menu-icon"></i><span>模型选择</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="chatgpt.html"><i class="ti-control-record"></i><p class="mc">ChatGPT</p></a></li>
+                             <p class="nav">复杂问题理解与代码生成</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="天工.html"><i class="ti-control-record"></i><p class="mc">天工</p></a></li>
+                            <p class="nav">超长中文文本处理</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="ENIRESpeed.html"><i class="ti-control-record"></i><p class="mc">文心一言</p></a></li>
+                            <p class="nav">红色中文创作，代码生成</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="Kimi.html"><i class="ti-control-record"></i><p class="mc">Kimi</p></a></li>
+                            <p class="nav">超长token回复，中文学术研究</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="百川.html"><i class="ti-control-record"></i><p class="mc">百川</p></a></li>
+                             <p class="nav">信息检索，中文文本创作</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="综合.html"><i class="ti-control-record"></i><p class="mc">最优回答</p></a></li>
+                            <p class="nav">五个模型回答的最优解</p>
+                        </ul>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="综合最优.html"><i class="ti-control-record"></i><p class="mc">综合回答</p></a></li>
+                            <p class="nav">五个模型回答的整合答案</p>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);"> <i class="fa-solid fa-graduation-cap fa-2xl" style="color: #6776e4;" class="align-self-center menu-icon"></i><span>导引</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="思维导图.html"><i class="ti-control-record"></i>思维导图</a></li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <a href="javascript: void(0);"><i class="fa-solid fa-book-skull fa-2xl" style="color: #6776e4;" class="align-self-center menu-icon"></i><span>学习模块</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>暴力破解<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="暴力破解.html">交互学习</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>Cross-Site Scripting</Script><span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="xss1.html">Xss发现</a></li>
+                                    <li><a href="xss2.html">Xss交互</a></li>
+                                    <li><a href="xss3.html">Xss绕过</a></li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>SQL-Inject<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="sql1.html">Sql发现</a></li>
+                                    <li><a href="sql2.html">Sql交互</a></li>
+                                    <li><a href="sql3.html">Sql绕过</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>CSRF<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="csrf1.html">Csrf发现</a></li>
+                                    <li><a href="csrf2.html">Csrf交互</a></li>
+                                    <li><a href="csrf3.html">Csrf绕过</a></li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>RCE<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="rce1.html">RCE交互学习</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>File Inclusion<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="filei.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>Unsafe Filedownload<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="filed.html">交互学习</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>Unsafe Fileupload<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="file1.html">木马编写</a></li>
+                                    <li><a href="file2.html">上传步骤</a></li>
+                                    <li><a href="file3.html">绕过方法</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>Over Permission<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="oper.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>../../<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="u.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>敏感信息泄露<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="mingan.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>PHP反序列化<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="php.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>XXE<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="xee.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>URL重定位<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="url.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>SSRF<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="ssrf.html">交互学习</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>     
+
+                </ul>
+    
+                <div class="update-msg text-center">
+                    <a href="javascript: void(0);" class="float-right close-btn text-white" data-dismiss="update-msg" aria-label="Close" aria-hidden="true">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                    <h5 class="mt-3">注意</h5>
+                    <p class="mb-3">我们提供良好的渗透学习平台，如果您有任何宝贵的想法</p>
+                    <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">请提出你的建议</a>
+                </div>
+            </div>
+        </div>
+        <!-- end left-sidenav-->
+        
+
+        <div class="page-wrapper">
+            <!-- Top Bar Start -->
+            <div class="topbar">            
+                <!-- Navbar -->
+                <nav class="navbar-custom">    
+                    <ul class="list-unstyled topbar-nav float-right mb-0">                      
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <span class="ml-1 nav-user-name hidden-sm">ProbeMaster</span>
+                                <img src="assets/images/users/user-8.jpg" alt="profile-user" class="rounded-circle" />                                 
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user" class="align-self-center icon-xs icon-dual mr-1"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings" class="align-self-center icon-xs icon-dual mr-1"></i> Settings</a>
+                                <div class="dropdown-divider mb-0"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="power" class="align-self-center icon-xs icon-dual mr-1"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul><!--end topbar-nav-->
+        
+                    <ul class="list-unstyled topbar-nav mb-0">                        
+                        <li>
+                            <button class="nav-link button-menu-mobile">
+                                <i data-feather="menu" class="align-self-center topbar-icon"></i>
+                            </button>
+                        </li>                   
+                    </ul>
+                </nav>
+                <!-- end navbar-->
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Page Content-->
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4 class="page-title">导引</h4>
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">Dastyle</a></li>
+                                            <li class="breadcrumb-item active">思维导图</li>
+                                        </ol>
+                                    </div><!--end col-->
+                                    <div class="col-auto align-self-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
+                                            <span class="day-name" id="Day_Name">Today:</span>&nbsp;
+                                            <span class="" id="Select_date">Jan 11</span>
+                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
+                                        </a>
+                                    </div><!--end col-->  
+                                </div><!--end row-->                                                              
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <!-- end page title end breadcrumb -->
+                   
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row" >
+                                        <div class="col-lg-9 border-right" id="append">
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="media">
+                                                        <div class="media-body align-self-center ml-2"> 
+                                                            <h6 class="mt-0 mb-1 font-16">请在右侧方框中输入你想学习的渗透方向</h6>
+                                                            <p class="text-muted mb-0">输入举例:xss(跨域脚本攻击漏洞),sql注入,文件上传漏洞,csrf(跨站请求伪造漏洞)  ......</p>                                                                                      
+                                                        </div><!--end media body-->
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="form-row">
+                                                        <label for="ask"><input type="text" class="form-control" id="ask"></label>
+                                                        <a href="javascript:void(0)"><i id="myfeat" data-feather="send" onclick="sendf()" ></i></a>
+                                                    </div><!-- col-8 -->
+                                                </div>
+                                            </div>
+                                            <div class="toolbar">
+                                                <button onclick="save_nodearray_file()" class="button">保存视图</button>
+                                                <!-- <button onclick="screen_shot()" class="button">下载导图</button> -->
+                                                <button onclick="expand_all()" class="button">展开全部节点</button>
+                                                <button onclick="expand_to_level(2)" class="button">展开到二级节点</button>
+                                                <button onclick="expand_to_level(3)" class="button">展开到三级节点</button>
+                                                <button onclick="collapse_all()" class="button">隐藏全部节点</button>
+                                                <button id="zoom-in-button" onclick="zoomIn()" class="button">放大视图</button>
+                                                <button id="zoom-out-button" onclick="zoomOut()" class="button">缩小视图</button>
+                                                 <!-- 文件上传按钮 -->
+                                                <label for="file_input_nodearray" class="file_upload_button">
+                                                上传视图
+                                                </label>
+                                                <input id="file_input_nodearray" class="file_input" type="file"/>
+                                                <button onclick="open_nodearray()" class="button">打开视图</button>
+                                                <br /><br />
+                                            </div>
+                                            <div id="jsmind_container"></div>
+
+
+                                            <!-- 引入 jsMind 的 JavaScript 文件 -->
+                                            <script type="text/javascript" src="https://unpkg.com/jsmind@0.8.1/es6/jsmind.js"></script>
+                                            <script src="assets/js/jsmind.menu.js"></script>
+                                            <script src="assets/js/jsmind.draggable.js"></script>
+                                            <script src="assets/js/jsmind.screenshot.js"></script>
+                                            <script type="text/javascript" src="https://unpkg.com/dom-to-image@2.6.0/dist/dom-to-image.min.js" ></script>
+                                            <script type="text/javascript" src="https://unpkg.com/jsmind@0.8.2/es6/jsmind.screenshot.js"></script>
+                                            <script>
+                                                // 鼠标滚轮监听，放大缩小 zoom in out
+                                                const mind = {
+                                                /* 元数据，定义思维导图的名称、作者、版本等信息 */
+                                                "meta":{
+                                                    "name":"example",
+                                                    "author":"hizzgdev@163.com",
+                                                    "version":"0.2"
+                                                },
+                                                /* 数据格式声明 */
+                                                "format":"node_array",
+                                                /* 数据内容 */
+                                                "data":[
+                                                    {'id': 'root', 'isroot': true, 'topic': '思维导图使用说明'},
+                                                    {'id': 'second1', 'parentid': 'root', 'topic': '基本功能', 'direction': 'left'},
+                                                    {'id': 'third1.1', 'parentid': 'second1', 'topic': '保存：保存为.jm文件'},
+                                                    // {'id': 'third1.2', 'parentid': 'second1', 'topic': '下载：下载为图片'},
+                                                    {'id': 'third1.3', 'parentid': 'second1', 'topic': '右键：编辑、删除、添加节点'},
+                                                    {'id': 'second2', 'parentid': 'root', 'topic': '上传导图', 'direction': 'left'},
+                                                    {'id': 'third2.1', 'parentid': 'second2', 'topic': '1.点击上传选择jm文件'},
+                                                    {'id': 'third2.2', 'parentid': 'second2', 'topic': '2.再点击打开文件'},
+                                                    {'id': 'second3', 'parentid': 'root', 'topic': 'GPT问询', 'direction': 'left'},
+                                                    {'id': 'third3.1', 'parentid': 'second3', 'topic': '在右上角输入想要生成思维导图的关键词'}
+                                                    ]
+                                                }
+                                                // const options = {
+                                                //   container: 'jsmind_container', // 必选，容器IP
+                                                //   editable: true, // 可选，是否启用编辑
+                                                //   theme: 'default', // 可选，主题
+                                                //   view: {
+                                                //     line_width: 2, // 思维导图线条的粗细
+                                                //     line_color: 'skyblue' // 思维导图线条的颜色
+                                                //   },
+                                                //   mode: 'side', // 显示模式，子节点只分布在根节点右侧
+                                                //   menuOpts:{  // 这里加入一个专门配置menu的对象
+                                                //     showMenu: true, //showMenu 为 true 则打开右键功能 ，反之关闭
+                                                //     injectionList: [
+                                                //       { target: 'edit', text: '编辑节点' },
+                                                //       { target: 'addChild', text: '添加子节点' },
+                                                //       { target: 'addBrother', text: '添加兄弟节点' },
+                                                //       { target: 'delete', text: '删除节点' },
+                                                //       { target: 'showAll', text: '展开全部节点' },
+                                                //       { target: 'hideAll', text: '隐藏全部节点' },
+                                                //       { target: 'screenshot', text: '下载导图' }
+                                                //     ]
+                                                //   }
+                                                // }
+                                                // const jm = new jsMind(options)
+                                                // jm.show(mind)
+
+                                                let _jm = null
+                                                function open_empty(){
+                                                    const options = {
+                                                        container: 'jsmind_container', // 必选，容器IP
+                                                        editable: true, // 可选，是否启用编辑
+                                                        theme: 'default', // 可选，主题
+                                                        view: {
+                                                        engine: "svg",
+                                                        line_width: 2, // 思维导图线条的粗细
+                                                        line_color: 'skyblue',// 思维导图线条的颜色
+                                                        draggable: true,
+                                                        hide_scrollbars_when_draggable: true,
+                                                        node_overflow: "wrap",
+                                                        },
+                                                        shortcut: {
+                                                        enable: false // 禁用快捷键
+                                                        },
+                                                        mode: 'side', // 显示模式，子节点只分布在根节点右侧
+                                                        menuOpts:{  // 这里加入一个专门配置menu的对象
+                                                        showMenu: true, //showMenu 为 true 则打开右键功能 ，反之关闭
+                                                        injectionList: [
+                                                            { target: 'edit', text: '编辑节点' },
+                                                            { target: 'delete', text: '删除节点' },
+                                                            { target: 'addChild', text: '添加子节点' },
+                                                            { target: 'addBrother', text: '添加兄弟节点' }
+                                                        ],
+                                                        style: {
+                                                            menuItem:{
+                                                            'line-height': '28px'
+                                                            },
+                                                        }
+                                                        }
+                                                    }
+                                                    _jm = jsMind.show(options, mind)
+                                                }
+
+                                                function open_nodearray(){
+                                                    var file_input = document.getElementById('file_input_nodearray');
+                                                    var files = file_input.files;
+                                                    if(files.length > 0){
+                                                        var file_data = files[0];
+                                                        jsMind.util.file.read(file_data,function(jsmind_data, jsmind_name){
+                                                            var mind = jsMind.util.json.string2json(jsmind_data);
+                                                            if(!!mind){
+                                                                _jm.show(mind);
+                                                                reBuild()
+                                                            }else{
+                                                                prompt_info('can not open this file as mindmap');
+                                                            }
+                                                        });
+                                                    }else{
+                                                        prompt_info('please choose a file first')
+                                                    }
+                                                }
+                                                    document.getElementById('ask').addEventListener('keydown', function(event) {
+                                                    // 检查按下的键是否是回车键
+                                                    if (event.key === 'Enter') {
+                                                      // 执行按钮点击事件
+                                                        sendf()
+                                                    }
+                                                  });
+                                                function sendf()
+                                                {
+                                                    var text = document.getElementById("ask").value;
+                                                    if(text){
+                                                        var icon = document.getElementById('myfeat');
+                                                        icon.setAttribute('data-feather', 'loader');
+                                                        icon.style.color = '#ADD8E6'
+
+                                                        feather.replace();
+                                                        const ask = {
+                                                            userask : text,
+                                                        }
+                                                        // var mind = {
+                                                        //     /* 元数据，定义思维导图的名称、作者、版本等信息 */
+                                                        //     "meta":{
+                                                        //         "name":"example",
+                                                        //         "author":"hizzgdev@163.com",
+                                                        //         "version":"0.2"
+                                                        //     },
+                                                        //     /* 数据格式声明 */
+                                                        //     "format":"node_array",
+                                                        //     /* 数据内容 */
+                                                        //     "data":[
+                                                        //         {"id":"root", "isroot":true, "topic":"我的思维导图"},
+                                                        //         {"id":"easy", "parentid":"root", "topic":"Easy", "direction":"left"},
+                                                        //         {"id":"easy1", "parentid":"easy", "topic":"Easy to show"},
+                                                        //         {"id":"easy2", "parentid":"easy", "topic":"Easy to edit"},
+                                                        //         {"id":"easy3", "parentid":"easy", "topic":"Easy to store"},
+                                                        //         {"id":"easy4", "parentid":"easy", "topic":"Easy to embed"},
+                                                        //         {"id":"open", "parentid":"root", "topic":"Open Source", "expanded":false, "direction":"right"},
+                                                        //         {"id":"open1", "parentid":"open", "topic":"on GitHub"},
+                                                        //         {"id":"open2", "parentid":"open", "topic":"BSD License"},
+                                                        //         {"id":"powerful", "parentid":"root", "topic":"Powerful", "direction":"right"},
+                                                        //         {"id":"powerful1", "parentid":"powerful", "topic":"Base on Javascript"},
+                                                        //         {"id":"powerful2", "parentid":"powerful", "topic":"Base on HTML5"},
+                                                        //         {"id":"powerful3", "parentid":"powerful", "topic":"Depends on you"}
+                                                        //     ]
+                                                        //     }
+                                                        // _jm.show(mind)
+                                                        // reBuild()
+                                                        // var icon = document.getElementById('myfeat');
+                                                        // icon.setAttribute('data-feather', 'send');
+                                                        // icon.style.color = '#646262'
+                                                        // feather.replace()           
+                                                        
+
+                                                        fetch('http://43.138.154.160:8081/create',{
+                                                            method : 'POST',
+                                                            headers : {
+                                                                'Content-Type' : 'application/json',
+                                                            },
+                                                            body: JSON.stringify(ask),
+                                                        })
+                                                            .then(response=>response.json())
+                                                            .then(data=>{ 
+                                                                
+                                                                mind.data = data
+                                                                _jm.show(mind)
+                                                                reBuild()
+                                                                var icon = document.getElementById('myfeat');
+                                                                icon.setAttribute('data-feather', 'send');
+                                                                icon.style.color = '#646262'
+                                                                feather.replace() 
+                                                                
+                                                            })
+                                                            .catch(error=>{
+                                                                console.error('Error:',error);
+                                                            })
+                                                    
+                                                        }
+                                                    }
+                                                
+
+                                                function save_nodearray_file(){
+                                                    var mind_data = _jm.get_data('node_array');
+                                                    var mind_name = mind_data.meta.name;
+                                                    var mind_str = jsMind.util.json.json2string(mind_data);
+                                                    jsMind.util.file.save(mind_str,'text/jsmind',mind_name+'.jm');
+                                                }
+
+                                                function screen_shot(){
+                                                    var jm = jsMind.current;
+                                                    jm.shoot();
+                                                }
+
+                                                function expand_all(){
+                                                    _jm.expand_all();
+                                                }
+
+                                                function collapse_all(){
+                                                    _jm.collapse_all();
+                                                }
+
+                                                function expand_to_level(num){
+                                                    _jm.expand_to_depth(num);
+                                                }
+
+                                                var zoomInButton = document.getElementById("zoom-in-button");
+                                                var zoomOutButton = document.getElementById("zoom-out-button");
+
+                                                function zoomIn() {
+                                                    if (_jm.view.zoomIn()) {
+                                                        zoomOutButton.disabled = false;
+                                                    } else {
+                                                        zoomInButton.disabled = true;
+                                                    };
+                                                };
+
+
+                                                function zoomOut() {
+                                                    if (_jm.view.zoomOut()) {
+                                                        zoomInButton.disabled = false;
+                                                    } else {
+                                                        zoomOutButton.disabled = true;
+                                                    };
+                                                };
+
+                                                function prompt_info(msg){
+                                                alert(msg)
+                                                }
+
+                                                // 改变窗口大小重置画布
+                                                window.onresize = function () {
+                                                _jm.resize()
+                                                }
+
+                                                function isMouseOnCanvas(event){
+                                                    const canvas = document.getElementById("jsmind_container")
+                                                    const rect = canvas.getBoundingClientRect();
+                                                    const mouseX = event.clientX
+                                                    const mouseY = event.clientY
+
+                                                    return mouseX >= rect.left && mouseX <= rect.right && mouseY >= rect.top && mouseY <= rect.bottom
+                                                }
+                                    
+
+                                                // 鼠标滚轮放大缩小
+                                                function mouseWheel() {
+                                                const scrollFunc = function (e) {
+                                                    e = e || window.event
+
+                                                    if(isMouseOnCanvas(e)){
+                                                        e.preventDefault()
+                                                        if (e.wheelDelta) {
+                                                            if (e.wheelDelta > 0) {
+                                                                zoomIn()
+                                                            } else {
+                                                                zoomOut()
+                                                            }
+                                                        }
+                                                        else if (e.detail) {
+                                                            if (e.detail > 0) {
+                                                                zoomIn()
+                                                            } else {
+                                                                zoomOut()
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                }
+                                                if (document.addEventListener) {
+                                                    document.addEventListener('mousewheel', scrollFunc, {passive: false})
+                                                }
+                                                window.onmousewheel = document.onmousewheel = scrollFunc
+                                                }
+                                                mouseWheel()
+
+                                                open_empty()
+                                            </script>
+
+                                        </div><!--end col-->
+
+
+                                    
+                                    </div><!--end row-->
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!-- container -->
+
+
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/feather.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/moment.js"></script>
+        <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+
+        <script src="../plugins/apex-charts/apexcharts.min.js"></script>
+        <script src="../plugins/flot-chart/jquery.canvaswrapper.js"></script>
+        <script src="../plugins/flot-chart/jquery.colorhelpers.js"></script>
+        <script src="../plugins/flot-chart/jquery.flot.js"></script>        
+        <script src="../plugins/flot-chart/jquery.flot.saturated.js"></script>
+        <script src="../plugins/flot-chart/jquery.flot.browser.js"></script>
+        <script src="../plugins/flot-chart/jquery.flot.drawSeries.js"></script>         
+        <script src="../plugins/flot-chart/jquery.flot.uiConstants.js"></script>
+        <script src="../plugins/flot-chart/jquery.flot-dataType.js"></script>
+        
+        
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>

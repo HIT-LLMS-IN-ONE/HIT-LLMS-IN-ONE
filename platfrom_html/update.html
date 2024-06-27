@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/update.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <script src="assets/js/client.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            <img class="login-img images" src="./assets/images/login.jpg" alt="登录">
+            <img class="register-img images" src="./assets/images/register.jpg" alt="注册">
+            <div class="login-wrapper">
+                <div class="top-tips">
+                    <span>Unified AI Platform</span>
+                    <span class="top-tips-span" id="navigate-button">登录</span>
+                </div>
+                <h1 class="h1-text">更新密码</h1>
+                <div class="register-form">
+                    <div class="user-form form-item">
+                        <div class="text-tips">
+                            <span>账号</span>
+                        </div>
+                        <input type="text" id="username_to">
+                    </div>
+                    <div class="password-form form-item">
+                        <div class="text-tips">
+                            <span>新密码</span>
+                        </div>
+                        <input type="password" id="newPassword0">
+                    </div>
+                    <div class="password-form form-item">
+                        <div class="text-tips">
+                            <span>确认密码</span>
+                        </div>
+                        <input type="password" id="newPassword1">
+                    </div>
+                    <button class="btn" onclick="changePassword()">更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let flag = 1;
+    document.querySelector('.top-tips-span').addEventListener('click', function () {
+        if (flag) {
+            document.querySelector('.content').classList.remove("add-class-content");
+            document.querySelector('.login-img').classList.remove("add-class-login-img");
+            document.querySelector('.login-img').classList.add("add-class-login-img-show");
+            document.querySelector('.register-img').classList.remove("add-class-register-img");
+            document.querySelector('.login-wrapper').style.height = '70vh';
+            document.querySelector('.content').style.height = '85vh';
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.register-form').style.display = 'block';
+            document.querySelector('.top-tips-span').innerHTML = '注册';
+            document.querySelector('.h1-text').innerHTML = '登录';
+        }
+    })
+
+    const navigateButton = document.getElementById('navigate-button');
+
+        // 为按钮添加点击事件监听器
+    navigateButton.addEventListener('click', function() {
+        // 跳转到指定页面
+        window.location.href = './index.html';
+    });
+
+
+
+</script>
+
+</html>
